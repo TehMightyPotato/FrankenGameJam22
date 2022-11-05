@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9195f431a4786b428304ef8070354d9, type: 3}
-  m_Name: Music1
+  m_Script: {fileID: 11500000, guid: 8e4a43edfcf5e564cb02872d1f90b536, type: 3}
+  m_Name: Ticker
   m_EditorClassIdentifier: 
-  needKind: 3
-  sprite: {fileID: 21300000, guid: 05eef1ac71890ef43ac8a65d44fc7d0b, type: 3}
+  gameTick:
+    m_PersistentCalls:
+      m_Calls: []
