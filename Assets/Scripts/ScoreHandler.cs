@@ -21,12 +21,6 @@ public class ScoreHandler : ScriptableObject
     [Separator("Runtime Values")]
     public int score;
 
-
-    private void Awake()
-    {
-        Init();
-    }
-
     public void Init()
     {
         score = 0;

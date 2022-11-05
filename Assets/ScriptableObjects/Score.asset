@@ -21,4 +21,4 @@ MonoBehaviour:
   onScoreChanged:
     m_PersistentCalls:
       m_Calls: []
-  score: 0
+  score: 4700
