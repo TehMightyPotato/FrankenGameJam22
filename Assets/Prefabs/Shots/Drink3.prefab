@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 4406425699909635570, guid: a3b863ffdfa900b4dab551e0e31ed497,
         type: 3}
       propertyPath: m_Name
-      value: Drink3
+      value: Drink1
       objectReference: {fileID: 0}
     - target: {fileID: 4406425699909635575, guid: a3b863ffdfa900b4dab551e0e31ed497,
         type: 3}
@@ -71,12 +71,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c4f1a417b19f13345979062434a187da,
+      objectReference: {fileID: 21300000, guid: e0aaabbeb27056542b69d470ed4881ef,
         type: 3}
-    - target: {fileID: 5320527589707785622, guid: a3b863ffdfa900b4dab551e0e31ed497,
-        type: 3}
-      propertyPath: shotKind
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3b863ffdfa900b4dab551e0e31ed497, type: 3}

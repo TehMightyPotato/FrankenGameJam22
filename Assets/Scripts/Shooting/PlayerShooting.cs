@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Extensions;
+using UnityEngine.Events;
 
 namespace Shooting
 {
     public class PlayerShooting : MonoBehaviour
     {
         private ControlScheme _controlScheme;
-        [SerializeField] private List<ProjectileRow> rows;
+        [SerializeField] private ProjectilesHandler projectilesHandler;
         [SerializeField] private Transform spawnPosition;
         [SerializeField] private float shootingVelocity;
         [SerializeField] private LineRenderer lineRenderer;
@@ -53,13 +54,13 @@ namespace Shooting
             switch (context.action.name)
             {
                 case "Fire1":
-                    Fire(rows[_selectedRow].prefabs[0]);
+                    Fire(projectilesHandler.GetSelectedPrefab(_selectedRow, 0));
                     break;
                 case "Fire2":
-                    Fire(rows[_selectedRow].prefabs[1]);
+                    Fire(projectilesHandler.GetSelectedPrefab(_selectedRow, 1));
                     break;
                 case "Fire3":
-                    Fire(rows[_selectedRow].prefabs[2]);
+                    Fire(projectilesHandler.GetSelectedPrefab(_selectedRow, 2));
                     break;
             }
         }
@@ -80,6 +81,7 @@ namespace Shooting
         private void SelectRow(int index)
         {
             _selectedRow = index;
+            projectilesHandler.RowChanged(index);
         }
     }
 }
