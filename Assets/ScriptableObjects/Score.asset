@@ -16,6 +16,8 @@ MonoBehaviour:
   planetHitWrongScoreChange: -50
   planetFinishedScoreChange: 100
   shotMissedScoreChange: -50
+  scoreLowerLimit: -1000
+  scoreUpperLimit: 5000
   onScoreChanged:
     m_PersistentCalls:
       m_Calls: []
