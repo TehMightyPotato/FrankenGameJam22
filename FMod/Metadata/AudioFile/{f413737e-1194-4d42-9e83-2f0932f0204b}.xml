@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{f413737e-1194-4d42-9e83-2f0932f0204b}">
+		<property name="assetPath">
+			<value>FinalSounds/SFX/Planeten/Luftballon/18_Luftbalon_I.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.0040816326530613</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c28b199d-e213-445f-b561-e5a286ed4dad}</destination>
+		</relationship>
+	</object>
+</objects>

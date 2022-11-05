@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{d6fca47d-f31d-4f41-8a0e-c25b5a1f4a03}">
+		<property name="assetPath">
+			<value>Temp/Internet Samples/utopia-cosmic-trance-mix-7523.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>229.77306122448979</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c28b199d-e213-445f-b561-e5a286ed4dad}</destination>
+		</relationship>
+	</object>
+</objects>

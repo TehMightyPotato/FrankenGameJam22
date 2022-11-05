@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{848d4502-1b76-40ba-a3dc-e792b635280d}">
+		<property name="assetPath">
+			<value>FinalSounds/SFX/Projektile/Peeps/Türsteher/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c28b199d-e213-445f-b561-e5a286ed4dad}</destination>
+		</relationship>
+	</object>
+</objects>
