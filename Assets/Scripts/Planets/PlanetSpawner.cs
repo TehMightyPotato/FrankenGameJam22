@@ -19,6 +19,10 @@ namespace Planets
 
         [SerializeField] private float initialDelay;
         
+        #if UNITY_EDITOR
+        public bool gizmos;
+        #endif
+        
         private void Start()
         {
             _spawnPlanetsRoutine = StartCoroutine(SpawnRoutine());
@@ -44,9 +48,13 @@ namespace Planets
             }
         }
 
+        
+    #if UNITY_EDITOR
         private void OnDrawGizmos()
         {
+            if(!gizmos) return;
             Gizmos.DrawCube(transform.position, spawnArea.bounds.size);
         }
+    #endif
     }
 }

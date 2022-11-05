@@ -1,6 +1,9 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using Extensions;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Planets.Needs
 {
@@ -8,16 +11,10 @@ namespace Planets.Needs
     public class NeedManager : ScriptableObject
     {
         [SerializeField] private List<Need> needs;
-
-        public List<Need> GetRandomNeeds(int count)
+        
+        public void GetRandomNeeds(int count, ref List<Need> list)
         {
-            var list = new List<Need>();
-            for (int i = 0; i < count; i++)
-            {
-                list.Add(needs.GetRandom());
-            }
-
-            return list;
+           list =  needs.OrderBy(arg => Random.Range(0f,1f)).Take(count).ToList();
         }
     }
 }

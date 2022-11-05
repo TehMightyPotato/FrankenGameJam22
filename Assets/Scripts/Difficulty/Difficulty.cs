@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Planets.Needs;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 namespace Difficulty
 {
@@ -25,7 +26,7 @@ namespace Difficulty
 
         public int CalcPlanetNeedsCount()
         {
-            return Mathf.RoundToInt(planetNeedCountCurve.Evaluate(currentDifficulty));
+            return Mathf.RoundToInt(Random.Range(1,planetNeedCountCurve.Evaluate(currentDifficulty)));
         }
     }
 }
