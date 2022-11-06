@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Person1
   m_EditorClassIdentifier: 
   needKind: 6
-  sprite: {fileID: 21300000, guid: 7993ca2aafebd8548b38bb31b8368fe9, type: 3}
+  sprite: {fileID: 21300000, guid: 7603f3169b0f7844ca2d90b4b81fb646, type: 3}
