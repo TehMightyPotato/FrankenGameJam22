@@ -29,7 +29,7 @@ namespace Planets
         }
 
         private void SpawnPlanet()
-        { 
+        {
             Instantiate(planetPrefab, CalcPlanetPosition(), quaternion.identity);
         }
 

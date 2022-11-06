@@ -14,6 +14,10 @@ namespace Shooting
         [SerializeField] private Transform spawnPosition;
         [SerializeField] private float shootingVelocity;
         [SerializeField] private LineRenderer lineRenderer;
+
+        public MusicManager MusicManager;
+        public FMODUnity.EventReference ShotEvent;
+
         private int _selectedRow;
         private Vector2 _mousePosition;
         private Camera _mainCam;
@@ -96,6 +100,8 @@ namespace Shooting
         {
             var obj = Instantiate(prefab, spawnPosition.position, Quaternion.identity);
             obj.GetComponent<Rigidbody>().AddForce(CalcForceVector());
+
+            MusicManager.PlayEvent(ShotEvent);
         }
 
         private Vector3 CalcForceVector()

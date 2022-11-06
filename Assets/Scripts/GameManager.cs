@@ -62,15 +62,14 @@ public class GameManager : MonoBehaviour
     private void ScoreChangedHandler(int newScore)
     {
         _lastMusicIntensity = Math.Min(_lastMusicIntensity + 0.02f, 1f);
-        MusicManager.SetIntensity(_lastMusicIntensity);
+        MusicManager.SetMusicIntensity(_lastMusicIntensity);
     }
 
     [ButtonMethod]
     public void StartGame()
     {
         StartCoroutine(TrackTimeRoutine());
-        MusicManager.SetMusicTheme(MusicTheme.Default);
-        MusicManager.SetIntensity(0);
+        MusicManager.SetMusicIntensity(0);
     }
 
     public void WinGame()
