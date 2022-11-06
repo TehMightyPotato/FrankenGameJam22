@@ -18,6 +18,8 @@ public class ScoreHandler : ScriptableObject
     public int scoreUpperLimit;
     [Separator("Events")]
     public UnityEvent<int> onScoreChanged;
+    public UnityEvent onPlanetHitCorrect;
+    public UnityEvent onPlanetHitWrong;
     [Separator("Runtime Values")]
     public int score;
 
@@ -31,6 +33,7 @@ public class ScoreHandler : ScriptableObject
     {
         score += planetHitCorrectScoreChange;
         onScoreChanged?.Invoke(score);
+        onPlanetHitCorrect?.Invoke();
     }
     
 
@@ -38,6 +41,7 @@ public class ScoreHandler : ScriptableObject
     {
         score += planetHitWrongScoreChange;
         onScoreChanged?.Invoke(score);
+        onPlanetHitWrong?.Invoke();
     }
 
     public void PlanetFinished()

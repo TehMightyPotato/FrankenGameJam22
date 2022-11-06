@@ -434,6 +434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14098cf8d5a488dbf78f2e271be497a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreHandler: {fileID: 11400000, guid: d01e7b3c0b39a9940ac8122159990453, type: 2}
   stateObjects:
   - state: 0
     objectsToActivate:
@@ -837,7 +838,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4551322064291433692
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1908,7 +1909,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4551322065398910436
 RectTransform:
   m_ObjectHideFlags: 0
