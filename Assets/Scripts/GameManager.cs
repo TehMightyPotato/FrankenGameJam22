@@ -42,6 +42,11 @@ public class GameManager : MonoBehaviour
 
     private void PlanetProjectileEntered(ProjectileEnteredEventArgs args)
     {
+        if (args.Planet.Needs.Count <= 0)
+        {
+            return;
+        }
+
         if (args.Planet.Needs.All(x => x.needKind != args.Projectile.shotKind))
         {
             MusicManager.PlayEvent(InvalidProjectileSoundEventName);

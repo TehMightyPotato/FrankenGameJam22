@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using MyBox;
@@ -93,7 +94,12 @@ namespace Planets
             if (needs.Count <= 0)
             {
                 scoreHandler.PlanetFinished();
-                Destroy(gameObject);
+
+                var curVelocity = ownRigidbody.velocity;
+
+                var moveVector = curVelocity + new Vector3((curVelocity.x > 0 ? 1 : -1) * Random.Range(1, 30), 0,
+                    (curVelocity.z > 0 ? 1 : -1) * Random.Range(1, 30));
+                ownRigidbody.AddForce(moveVector, ForceMode.Impulse);
             }
             Destroy(other.gameObject);
         }
