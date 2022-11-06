@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{24d56567-c925-4d26-9648-7ac7b1de5cef}">
+		<property name="name">
+			<value>Theme</value>
+		</property>
+		<relationship name="folder">
+			<destination>{9a5219c5-3fa6-4728-bf92-fa23cf34a933}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{5112798c-6080-4b58-931d-8864f181cc0a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{5112798c-6080-4b58-931d-8864f181cc0a}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>4</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Base</value>
+			<value>Dubstep</value>
+			<value>Hit</value>
+			<value>Trance</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
