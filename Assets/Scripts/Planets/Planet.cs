@@ -24,6 +24,10 @@ namespace Planets
         [Separator("SO References")]
         [SerializeField] private Difficulty.Difficulty difficulty;
         [SerializeField] private ScoreHandler scoreHandler;
+
+        [Separator("Planet events")]
+        [SerializeField]
+        private PlanetHitHandler planetHitHandler;
         [Separator("Values")]
         [SerializeField] private float minScale;
         [SerializeField] private float maxScale;
@@ -31,6 +35,8 @@ namespace Planets
 
         private List<Need> needs;
         private Dictionary<Need, GameObject> spriteDict;
+
+        public IReadOnlyList<Need> Needs => needs;
 
         private void Awake()
         {
@@ -69,6 +75,8 @@ namespace Planets
             if (!other.CompareTag("Projectile")) return;
             if (other.gameObject.TryGetComponent<Projectile>(out var projectile))
             {
+                planetHitHandler.ProjectileEntered(this, projectile);
+
                 var result = needs.FirstOrDefault(x => x.needKind == projectile.shotKind);
                 if (result != null)
                 {

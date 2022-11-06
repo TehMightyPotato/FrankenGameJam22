@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{9399f131-1721-4723-9108-e7d6e88eed3a}">
+		<property name="name">
+			<value>Drunkenness</value>
+		</property>
+		<relationship name="folder">
+			<destination>{9a5219c5-3fa6-4728-bf92-fa23cf34a933}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{4872542c-1182-4772-81ba-4920f49943a5}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{4872542c-1182-4772-81ba-4920f49943a5}">
+		<property name="maximum">
+			<value>100</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
