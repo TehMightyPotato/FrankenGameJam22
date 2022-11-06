@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{30a473e6-b90e-4921-a842-fec14507e169}">
+		<property name="assetPath">
+			<value>FinalSounds/SFX/Projektile/Sounds/Denn_im_Herzen_bist_du_ein_Bar_Full.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.7281632653061223</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c28b199d-e213-445f-b561-e5a286ed4dad}</destination>
+		</relationship>
+	</object>
+</objects>

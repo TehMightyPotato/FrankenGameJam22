@@ -60,9 +60,6 @@
 		<property name="maxVoices">
 			<value>1</value>
 		</property>
-		<property name="voiceStealing">
-			<value>3</value>
-		</property>
 	</object>
 	<object class="MarkerTrack" id="{85fd9499-0b28-4b69-9702-7aad92c4d689}" />
 	<object class="GroupTrack" id="{ff1b3730-89f6-4f82-ab6d-fe2d40346131}">
@@ -105,7 +102,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{211651a0-4707-4018-aa4e-22a976e03921}">
 		<property name="volume">
-			<value>-10.5</value>
+			<value>-19.5</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>

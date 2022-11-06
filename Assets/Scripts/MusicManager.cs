@@ -4,13 +4,6 @@ using FMOD;
 using FMOD.Studio;
 using UnityEngine;
 
-public enum MusicTheme
-{
-    Default,
-    Dubstep,
-    Hit,
-    Trance
-}
 
 public class MusicManager : MonoBehaviour
 {
@@ -34,7 +27,14 @@ public class MusicManager : MonoBehaviour
         _musicInstance = FMODUnity.RuntimeManager.CreateInstance(EventName);
         _musicInstance.start();
     }
-    
+
+    public void OnDestroy()
+    {
+        _musicInstance.release();
+        _musicInstance.stop(STOP_MODE.IMMEDIATE);
+        _musicInstance.clearHandle();
+    }
+
     public void Update()
     {
         if (_currentDynamicEvents.Count > 0)
@@ -50,16 +50,11 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    public void SetIntensity(float intensity)
+    public void SetMusicIntensity(float intensity)
     {
         _musicInstance.setParameterByName("Intensity", intensity);
     }
-
-    public void SetMusicTheme(MusicTheme theme)
-    {
-        _musicInstance.setParameterByNameWithLabel("Theme", theme.ToString());
-    }
-
+    
     public void PlayEvent(FMODUnity.EventReference eventReference)
     {
         var eventInstance = FMODUnity.RuntimeManager.CreateInstance(eventReference);
