@@ -7,6 +7,6 @@ namespace Shooting
     [Serializable]
     public class ProjectileRow
     {
-        public List<GameObject> prefabs;
+        public List<ProjectileContainer> projectiles;
     }
 }

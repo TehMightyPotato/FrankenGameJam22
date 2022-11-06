@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Music1
   m_EditorClassIdentifier: 
   needKind: 3
-  sprite: {fileID: 21300000, guid: 05eef1ac71890ef43ac8a65d44fc7d0b, type: 3}
+  sprite: {fileID: 21300000, guid: 5f49edca9ab8dd241a9954c3cbd2c0ce, type: 3}
