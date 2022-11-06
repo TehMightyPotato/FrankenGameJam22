@@ -20,6 +20,7 @@ public class ScoreHandler : ScriptableObject
     public UnityEvent<int> onScoreChanged;
     public UnityEvent onPlanetHitCorrect;
     public UnityEvent onPlanetHitWrong;
+    public UnityEvent onLowerScoreLimitReached;
     [Separator("Runtime Values")]
     public int score;
 
@@ -27,6 +28,7 @@ public class ScoreHandler : ScriptableObject
     {
         score = 0;
         onScoreChanged.RemoveAllListeners();
+        onScoreChanged.AddListener(x => CheckForLooseCondition());
     }
 
     public void PlanetHitCorrect()
@@ -54,5 +56,13 @@ public class ScoreHandler : ScriptableObject
     {
         score += shotMissedScoreChange;
         onScoreChanged?.Invoke(score);
-    } 
+    }
+
+    private void CheckForLooseCondition()
+    {
+        if (score <= scoreLowerLimit)
+        {
+            onLowerScoreLimitReached?.Invoke();
+        }
+    }
 }
