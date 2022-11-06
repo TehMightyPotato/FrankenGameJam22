@@ -6,6 +6,7 @@ using MyBox;
 using Shooting;
 using UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -37,7 +38,8 @@ public class GameManager : MonoBehaviour
     {
         scoreHandler.onScoreChanged.AddListener(ScoreChangedHandler);
         planetHitHandler.OnProjectileEntered.AddListener(PlanetProjectileEntered);
-
+        scoreHandler.onLowerScoreLimitReached.AddListener(LooseGame);
+        StartGame();
     }
 
     private void PlanetProjectileEntered(ProjectileEnteredEventArgs args)
@@ -63,11 +65,6 @@ public class GameManager : MonoBehaviour
         MusicManager.SetIntensity(_lastMusicIntensity);
     }
 
-    public void OnDestroy()
-    {
-
-    }
-
     [ButtonMethod]
     public void StartGame()
     {
@@ -84,6 +81,7 @@ public class GameManager : MonoBehaviour
     public void LooseGame()
     {
         _stop = true;
+        SceneManager.LoadScene("LostGame");
     }
 
     private IEnumerator TrackTimeRoutine()

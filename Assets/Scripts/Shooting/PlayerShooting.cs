@@ -32,11 +32,38 @@ namespace Shooting
             _controlScheme.Gameplay.Fire1.performed += FireSelected;
             _controlScheme.Gameplay.Fire2.performed += FireSelected;
             _controlScheme.Gameplay.Fire3.performed += FireSelected;
-            _controlScheme.Gameplay.SelectRow1.performed += context => {SelectRow(0); };
-            _controlScheme.Gameplay.SelectRow2.performed += context => {SelectRow(1); };
-            _controlScheme.Gameplay.SelectRow3.performed += context => {SelectRow(2); };
+            _controlScheme.Gameplay.SelectRow1.performed += OnSelectRow1Onperformed;
+            _controlScheme.Gameplay.SelectRow2.performed += OnSelectRow2Onperformed;
+            _controlScheme.Gameplay.SelectRow3.performed += OnSelectRow3Onperformed;
             _controlScheme.Gameplay.Mouse.performed += HandleMousePosition;
         }
+
+        private void OnSelectRow3Onperformed(InputAction.CallbackContext _)
+        {
+            SelectRow(2);
+        }
+
+        private void OnSelectRow2Onperformed(InputAction.CallbackContext _)
+        {
+            SelectRow(1);
+        }
+
+        private void OnSelectRow1Onperformed(InputAction.CallbackContext _)
+        {
+            SelectRow(0);
+        }
+
+        private void UnsubscribeInputEvents()
+        {
+            _controlScheme.Gameplay.Fire1.performed -= FireSelected;
+            _controlScheme.Gameplay.Fire2.performed -= FireSelected;
+            _controlScheme.Gameplay.Fire3.performed -= FireSelected;
+            _controlScheme.Gameplay.SelectRow1.performed -= OnSelectRow1Onperformed;
+            _controlScheme.Gameplay.SelectRow2.performed -= OnSelectRow2Onperformed;
+            _controlScheme.Gameplay.SelectRow3.performed -= OnSelectRow3Onperformed;
+            _controlScheme.Gameplay.Mouse.performed -= HandleMousePosition;
+        }
+        
 
         private void HandleMousePosition(InputAction.CallbackContext context)
         {
@@ -82,6 +109,11 @@ namespace Shooting
         {
             _selectedRow = index;
             projectilesHandler.RowChanged(index);
+        }
+
+        private void OnDisable()
+        {
+            UnsubscribeInputEvents();
         }
     }
 }

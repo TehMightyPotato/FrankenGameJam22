@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UI
 {
@@ -8,18 +9,18 @@ namespace UI
     {
         public RearMirrorState state;
         
-        public GameObject[] objectsToActivate;
-        public GameObject[] objectsToDeactivate;
+        public Image[] objectsToActivate;
+        public Image[] objectsToDeactivate;
 
         public void Activate()
         {
             foreach (var gameObject in objectsToActivate)
             {
-                gameObject.SetActive(true);
+                gameObject.enabled = true;
             }
             foreach (var gameObject in objectsToDeactivate)
             {
-                gameObject.SetActive(false);
+                gameObject.enabled = false;
             }
         }
 
@@ -27,11 +28,11 @@ namespace UI
         {
             foreach (var gameObject in objectsToActivate)
             {
-                gameObject.SetActive(false);
+                gameObject.enabled = false;
             }
             foreach (var gameObject in objectsToDeactivate)
             {
-                gameObject.SetActive(true);
+                gameObject.enabled = true;
             }
         }
     }

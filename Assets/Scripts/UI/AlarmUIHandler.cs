@@ -2,14 +2,15 @@ using System;
 using System.Collections;
 using Shooting;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UI
 {
     public class AlarmUIHandler : MonoBehaviour
     {
         [SerializeField] private ProjectilesHandler handler;
-        [SerializeField] private GameObject[] toActivate;
-        [SerializeField] private GameObject[] toDeactivate;
+        [SerializeField] private Image[] toActivate;
+        [SerializeField] private Image[] toDeactivate;
         private Coroutine _animRoutine;
 
         private void Start()
@@ -22,33 +23,31 @@ namespace UI
 
         private void Trigger()
         {
-            if (_animRoutine != null)
-            {
-                _animRoutine = StartCoroutine(AlarmUI());
-            }
+            if (_animRoutine != null) return;
+            _animRoutine = StartCoroutine(AlarmUI());
         }
         
         private IEnumerator AlarmUI()
         {
             foreach (var obj in toDeactivate)
             {
-                obj.SetActive(false);
+                obj.enabled = false;
             }
 
             foreach (var obj in toActivate)
             {
-                obj.SetActive(true);
+                obj.enabled = true;
             }
 
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.3f);
             
             foreach (var obj in toActivate)
             {
-                obj.SetActive(false);
+                obj.enabled = false;
             }
             foreach (var obj in toDeactivate)
             {
-                obj.SetActive(true);
+                obj.enabled = true;
             }
 
             _animRoutine = null;

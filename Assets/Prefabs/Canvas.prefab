@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4551322063516634921
 RectTransform:
   m_ObjectHideFlags: 0
@@ -53,7 +53,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4551322063516634922}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -321,6 +321,7 @@ GameObject:
   - component: {fileID: 4551322063681370962}
   - component: {fileID: 4551322063681370963}
   - component: {fileID: 4551322063681371055}
+  - component: {fileID: 2141585793}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -438,22 +439,22 @@ MonoBehaviour:
   stateObjects:
   - state: 0
     objectsToActivate:
-    - {fileID: 4551322065398910440}
+    - {fileID: 4551322065398910435}
     objectsToDeactivate: []
   - state: 1
     objectsToActivate:
-    - {fileID: 4551322063742723606}
+    - {fileID: 4551322063742723601}
     objectsToDeactivate: []
   - state: 2
     objectsToActivate:
-    - {fileID: 4551322064108494864}
+    - {fileID: 4551322064108494955}
     objectsToDeactivate: []
   - state: 3
     objectsToActivate:
-    - {fileID: 4551322064291433664}
+    - {fileID: 4551322064291433691}
     objectsToDeactivate:
-    - {fileID: 4551322063608489044}
-    - {fileID: 4551322065475186188}
+    - {fileID: 4551322063608489042}
+    - {fileID: 4551322065475186184}
   OnStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -461,6 +462,24 @@ MonoBehaviour:
     state: 0
     objectsToActivate: []
     objectsToDeactivate: []
+--- !u!114 &2141585793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4551322063681370964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 675a459f32d5c8b4da3f2ef2959785d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handler: {fileID: 11400000, guid: 52a34ac0fadc06144ae7a2208b320996, type: 2}
+  toActivate:
+  - {fileID: 4551322063516634920}
+  - {fileID: 4551322065071910925}
+  toDeactivate:
+  - {fileID: 4551322064904156634}
 --- !u!1 &4551322063723267607
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,7 +574,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4551322063742723602
 RectTransform:
   m_ObjectHideFlags: 0
@@ -611,7 +630,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4551322063742723606}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -652,7 +671,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4551322064108494956
 RectTransform:
   m_ObjectHideFlags: 0
@@ -708,7 +727,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4551322064108494864}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -838,7 +857,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4551322064291433692
 RectTransform:
   m_ObjectHideFlags: 0
@@ -894,7 +913,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4551322064291433664}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1556,7 +1575,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4551322065071910927}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
