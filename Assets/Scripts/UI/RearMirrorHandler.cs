@@ -4,22 +4,39 @@ using System.Linq;
 using MyBox;
 using UnityEngine;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 namespace UI
 {
     public class RearMirrorHandler : MonoBehaviour
     {
+        [SerializeField] private ScoreHandler scoreHandler;
+        
         public GameObjectContainer[] stateObjects;
         
         public UnityEvent<RearMirrorState> OnStateChanged;
 
         [SerializeField, ReadOnly] private GameObjectContainer currentState;
+        
 
         private Coroutine _stateChangeRoutine;
 
         private void Start()
         {
             currentState = stateObjects.FirstOrDefault(x => x.state == RearMirrorState.Default);
+            scoreHandler.onPlanetHitCorrect.AddListener( () =>
+            {
+                var rng = Random.value;
+                if (rng > 0.5f)
+                {
+                    ChangeState(RearMirrorState.Happy);
+                }
+                else
+                {
+                    ChangeState(RearMirrorState.Drinking);
+                }
+            });
+            scoreHandler.onPlanetHitWrong.AddListener(()=>ChangeState(RearMirrorState.Sad));
             currentState.Activate();
         }
 
@@ -56,29 +73,32 @@ namespace UI
         private IEnumerator DefaultStateRoutine()
         {
             currentState.Activate();
-            StateCleanup();
             yield return null;
+            StateCleanup();
         }
 
         private IEnumerator HappyStateRoutine()
         {
             currentState.Activate();
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(2);
             StateCleanup();
+            ChangeState(RearMirrorState.Default);
         }
 
         private IEnumerator SadStateRoutine()
         {
             currentState.Activate();
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(2);
             StateCleanup();
+            ChangeState(RearMirrorState.Default);
         }
 
         private IEnumerator DrinkingStateRoutine()
         {
             currentState.Activate();
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(2);
             StateCleanup();
+            ChangeState(RearMirrorState.Default);
         }
     }
 
