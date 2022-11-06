@@ -157,6 +157,7 @@ GameObject:
   - component: {fileID: 7905607170550945505}
   - component: {fileID: 4467063046923514386}
   - component: {fileID: 6217076000659666415}
+  - component: {fileID: -2343270127432429004}
   m_Layer: 0
   m_Name: Planet
   m_TagString: Planet
@@ -232,6 +233,36 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-2343270127432429004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7905607170550945504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1303782979
+      Data2: 1230034151
+      Data3: 538335386
+      Data4: 1033002773
+    Path: event:/SFX/Projectile/Music/Dubstep
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &8716930999209369897
 GameObject:
   m_ObjectHideFlags: 0
