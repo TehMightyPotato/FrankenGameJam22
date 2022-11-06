@@ -4,9 +4,6 @@
 		<property name="name">
 			<value>Shots fired Main Theme</value>
 		</property>
-		<property name="isDefault">
-			<value>true</value>
-		</property>
 		<property name="outputFormat">
 			<value>1</value>
 		</property>
@@ -851,6 +848,9 @@
 	<object class="TempoMarker" id="{b21bdea7-a1e2-4025-8178-f2f1af11244a}">
 		<property name="position">
 			<value>0</value>
+		</property>
+		<property name="timeSignatureDenominator">
+			<value>16</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{0b602e16-23c4-47a1-a595-880f15c4eb70}</destination>

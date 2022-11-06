@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{e6cf4892-d00b-4b38-adca-f35861a4e340}">
 		<property name="assetPath">
-			<value>Temp/Vinc/kick.wav</value>
+			<value>Music/Vinc/kick.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

@@ -212,6 +212,7 @@ MonoBehaviour:
   visualisation: {fileID: 7905607168544421066}
   difficulty: {fileID: 11400000, guid: 18e383b5b8baa934bbfd665eff93619b, type: 2}
   scoreHandler: {fileID: 11400000, guid: d01e7b3c0b39a9940ac8122159990453, type: 2}
+  planetHitHandler: {fileID: 11400000, guid: 2148e5b52f111bb4693fec7dbf89a624, type: 2}
   minScale: 0.8
   maxScale: 1.1
   initialVelocity: {x: 0, y: 0, z: -2}

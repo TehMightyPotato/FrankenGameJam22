@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{2681e69c-8c91-4b07-a069-f06b1046cd84}">
 		<property name="assetPath">
-			<value>Temp/Vinc/hihat4.wav</value>
+			<value>Music/Vinc/hihat4.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
