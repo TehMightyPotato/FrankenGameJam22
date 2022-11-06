@@ -5,7 +5,7 @@
 			<value>Dubstep</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{830b1785-220b-4e8f-9d30-70e371c2a53d}</destination>
@@ -84,7 +84,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{f3a0df18-c655-42d1-b784-4473ae102f1c}">
 		<property name="volume">
-			<value>-19</value>
+			<value>-5.5</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{8a4aca20-7980-45dc-947c-6f9d593e519a}</destination>
@@ -141,7 +141,6 @@
 	<object class="MixerBusEffectChain" id="{8a4aca20-7980-45dc-947c-6f9d593e519a}">
 		<relationship name="effects">
 			<destination>{9fed9e84-3bb8-4b06-bf34-e43b1dea7d69}</destination>
-			<destination>{b45532b3-8803-4d15-91a7-153f92057d3d}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{0649b5e2-2c4d-44ab-9748-d971137d4bfe}" />
@@ -169,17 +168,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{dd6d405b-b1ca-4e67-9d42-a2d089b35ce2}" />
 	<object class="MixerBusFader" id="{9fed9e84-3bb8-4b06-bf34-e43b1dea7d69}" />
-	<object class="SpatialiserEffect" id="{b45532b3-8803-4d15-91a7-153f92057d3d}">
-		<property name="extentMode">
-			<value>1</value>
-		</property>
-		<property name="soundSize">
-			<value>11.5</value>
-		</property>
-		<property name="minimumExtent">
-			<value>40</value>
-		</property>
-	</object>
 	<object class="AutomationPoint" id="{0c39b247-4cdf-42a1-bcdf-bcf90742e53f}">
 		<property name="position">
 			<value>4.625</value>
@@ -217,12 +205,12 @@
 			<value>0</value>
 		</property>
 		<property name="curveShape">
-			<value>-0.5618999</value>
+			<value>0.00116725953</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{ab70792d-442d-4763-b790-c0eb6f5bdb3d}">
 		<property name="position">
-			<value>40</value>
+			<value>100</value>
 		</property>
 		<property name="value">
 			<value>-80</value>
