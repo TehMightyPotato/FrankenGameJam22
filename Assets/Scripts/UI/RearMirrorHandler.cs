@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Linq;
 using MyBox;
 using UnityEngine;
 using UnityEngine.Events;
@@ -8,17 +9,25 @@ namespace UI
 {
     public class RearMirrorHandler : MonoBehaviour
     {
-        [Separator("Default State")] public GameObject defaultStateObj;
+        public GameObjectContainer[] stateObjects;
         
         public UnityEvent<RearMirrorState> OnStateChanged;
 
-        [SerializeField] private RearMirrorState currentState;
+        [SerializeField, ReadOnly] private GameObjectContainer currentState;
 
         private Coroutine _stateChangeRoutine;
-        
+
+        private void Start()
+        {
+            currentState = stateObjects.FirstOrDefault(x => x.state == RearMirrorState.Default);
+            currentState.Activate();
+        }
+
         public void ChangeState(RearMirrorState state)
         {
             if (_stateChangeRoutine != null) return;
+            currentState.Deactivate();
+            currentState = stateObjects.FirstOrDefault(x => x.state == state);
             switch (state)
             {
                 case RearMirrorState.Default:
@@ -36,8 +45,6 @@ namespace UI
                 default:
                     throw new ArgumentOutOfRangeException(nameof(state), state, null);
             }
-
-            currentState = state;
             OnStateChanged?.Invoke(state);
         }
 
@@ -48,22 +55,30 @@ namespace UI
 
         private IEnumerator DefaultStateRoutine()
         {
-            
+            currentState.Activate();
+            StateCleanup();
+            yield return null;
         }
 
         private IEnumerator HappyStateRoutine()
         {
-            
+            currentState.Activate();
+            yield return new WaitForSeconds(1);
+            StateCleanup();
         }
 
         private IEnumerator SadStateRoutine()
         {
-            
+            currentState.Activate();
+            yield return new WaitForSeconds(1);
+            StateCleanup();
         }
 
         private IEnumerator DrinkingStateRoutine()
         {
-            
+            currentState.Activate();
+            yield return new WaitForSeconds(1);
+            StateCleanup();
         }
     }
 
