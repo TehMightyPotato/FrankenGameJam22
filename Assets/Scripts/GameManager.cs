@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        currentLevelTime = 0;
         ticker.Init();
         scoreHandler.Init();
         projectilesHandler.Init();
