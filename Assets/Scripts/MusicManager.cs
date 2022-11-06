@@ -39,14 +39,13 @@ public class MusicManager : MonoBehaviour
     {
         if (_currentDynamicEvents.Count > 0)
         {
-            foreach (var eventInstance in _currentDynamicEvents)
+            for (var i = _currentDynamicEvents.Count - 1; i >= 0; i--)
             {
-                var res = eventInstance.getPlaybackState(out var playbackState);
+                var res = _currentDynamicEvents[i].getPlaybackState(out var playbackState);
                 if (res == RESULT.OK && playbackState != PLAYBACK_STATE.STOPPED)
                     continue;
-
-                _currentDynamicEvents.Remove(eventInstance);
-                eventInstance.clearHandle();
+                _currentDynamicEvents[i].clearHandle();
+                _currentDynamicEvents.Remove(_currentDynamicEvents[i]);
             }
         }
     }

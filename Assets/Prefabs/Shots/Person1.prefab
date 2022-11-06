@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 4406425699909635570, guid: a3b863ffdfa900b4dab551e0e31ed497,
         type: 3}
       propertyPath: m_Name
-      value: Person2
+      value: Person1
       objectReference: {fileID: 0}
     - target: {fileID: 4406425699909635575, guid: a3b863ffdfa900b4dab551e0e31ed497,
         type: 3}
@@ -76,7 +76,7 @@ PrefabInstance:
     - target: {fileID: 5320527589707785622, guid: a3b863ffdfa900b4dab551e0e31ed497,
         type: 3}
       propertyPath: shotKind
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3b863ffdfa900b4dab551e0e31ed497, type: 3}

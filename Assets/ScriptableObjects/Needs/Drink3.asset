@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Drink3
   m_EditorClassIdentifier: 
   needKind: 2
-  sprite: {fileID: 21300000, guid: c4f1a417b19f13345979062434a187da, type: 3}
+  sprite: {fileID: 21300000, guid: e0aaabbeb27056542b69d470ed4881ef, type: 3}
